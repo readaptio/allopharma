@@ -1,0 +1,55 @@
+<form
+  id="app"
+  @submit="checkForm"
+  action="https://vuejs.org/"
+  method="post"
+>
+
+  <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+
+  <p>
+    <label for="name">Name</label>
+    <input
+      id="name"
+      v-model="name"
+      type="text"
+      name="name"
+    >
+  </p>
+
+  <p>
+    <label for="city">City</label>
+    <input
+      id="city"
+      v-model="city"
+      type="text"
+      name="city"
+	>
+  </p>
+
+  <p>
+    <label for="city">Select town</label>
+    <select
+      id="city"
+      v-model="city"
+      name="city"
+    >
+      <option>Yaoundé</option>
+      <option>Douala</option>
+      <option>Bafoussam</option>
+    </select>
+  </p>
+
+  <p>
+    <input
+      type="submit"
+      value="Submit"
+    >
+  </p>
+
+</form>
